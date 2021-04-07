@@ -11,6 +11,10 @@ const session = require('express-session');
 const { template } = require('express-art-template');
 //导入dateformate
 const dateFormat = require('dateformat');
+//导入morgan第三方模块
+const morgan = require('morgan');
+//导入config模块
+const config = require('config');
 //设置模板存放目录
 app.set('views', path.join(__dirname, 'views'));
 //渲染模板时不写后缀，默认拼接art为后缀
@@ -31,8 +35,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 //处理请求参数
 app.use(bodyParser.urlencoded({ extended: false }));
 //配置session
-app.use(session({ secret: 'secret key' }))
-    //拦截请求，判断用户的登录状态
+app.use(session({
+    secret: 'secret key',
+    saveUninitialized: false,
+    cookie: {
+        maxAge: 24 * 60 * 60 * 1000
+    }
+}));
+//获取系统环境变量，返回值是对象
+if (process.env.NODE_ENV == 'developement') {
+    console.log('当前是开发环境');
+    //在开发环境中，将客户端发送到服务端的请求信息打印到控制台中
+    // app.use(morgan('dev'))
+} else {
+    console.log('当前是生产环境');
+}
+//拦截请求，判断用户的登录状态
 app.use('/admin', require('./middleware/loginGuard'));
 app.use('/home', home);
 app.use('/admin', admin);
@@ -52,4 +70,5 @@ app.use((err, req, res, next) => {
     })
     //监听端口
 app.listen(3000);
+console.log(config.get('title'));
 console.log('网站服务器启动成功');

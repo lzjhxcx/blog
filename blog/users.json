@@ -1,0 +1,71 @@
+[{
+  "_id": {
+    "$oid": "606bc51ea7a5132c8cf7f38f"
+  },
+  "state": 0,
+  "username": "超级管理员",
+  "email": "123@163.com",
+  "password": "$2b$10$O8r6G2/WBoANl5qvCIfrN.LYMpPHUMudwh16iHbiINSwghXgWgqYG",
+  "role": "admin",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606bc59fa7a5132c8cf7f390"
+  },
+  "state": 0,
+  "username": "钱一",
+  "email": "qianyi@qq.com",
+  "password": "$2b$10$uHMFJCchoE1Bkidp.S1pMuEVCfNgWMLKJbwn./nAQY2WdquzcDlwe",
+  "role": "normal",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606bc5e5a7a5132c8cf7f391"
+  },
+  "state": 0,
+  "username": "二狗子",
+  "email": "ergouzi@qq.com",
+  "password": "$2b$10$bjOU5ASg7.NyEaplUVgFf.IAx8F2rV2dTuzrib5wAcKstTJ2kPDNO",
+  "role": "normal",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606bc5ffa7a5132c8cf7f392"
+  },
+  "state": 0,
+  "username": "张三",
+  "email": "zhangsan@qq.com",
+  "password": "$2b$10$wCKU7ClcL/VMotMOyxUzCeLIB6aDvsYIwbarHzWuc8qHzzP05L/J2",
+  "role": "normal",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606bc61ba7a5132c8cf7f393"
+  },
+  "state": 0,
+  "username": "李四",
+  "email": "lisi@qq.com",
+  "password": "$2b$10$W4P6.ckFvow1eF..9yIZh.dsckOPcy.RWmQ/oL5kf3AFLuMlH0N6.",
+  "role": "normal",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606bc635a7a5132c8cf7f394"
+  },
+  "state": 0,
+  "username": "王五",
+  "email": "wangwu@qq.com",
+  "password": "$2b$10$vCqxjGmVH.j9FeiDO0S0.OPrOXfH0QmEuk6xWOMVFBzgxU5EbjVbe",
+  "role": "normal",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606bc686a7a5132c8cf7f395"
+  },
+  "state": 0,
+  "username": "赵六",
+  "email": "zhaoliu@qq.com",
+  "password": "$2b$10$CHMPXwj2HXYjS8PUpo3ay.XXHI9HfQQ2LSTCDd0ZaumkFJrJkMriq",
+  "role": "normal",
+  "__v": 0
+}]

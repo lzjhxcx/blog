@@ -42,12 +42,12 @@ const User = mongoose.model('User', userSchema);
 //     // 生成随机字符串 gen => generate 生成 salt 盐
 //     let salt = await bcrypt.genSalt(10);
 //     // 使用随机字符串对密码进行加密
-//     let pass = await bcrypt.hash('77777777', salt)
+//     let pass = await bcrypt.hash('1111', salt)
 //     console.log(pass);
 //     //加密用户密码
-//     User.findOneAndUpdate({ username: '牛肉干' }, {
+//     User.create({
 //         username: '牛肉干',
-//         email: '1234567@163.com',
+//         email: '123@163.com',
 //         password: pass,
 //         role: 'admin',
 //         state: 0

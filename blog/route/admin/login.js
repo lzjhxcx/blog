@@ -19,7 +19,12 @@ module.exports = async(req, res) => {
             if (isVaild) {
                 req.app.locals.userInfo = user;
                 req.session.username = user.username;
-                res.redirect('/admin/user')
+                req.session.role = user.role;
+                if (user.role == 'admin') {
+                    res.redirect('/admin/user');
+                } else {
+                    res.redirect('/home/index');
+                }
             } else {
                 //密码比对失败
                 return res.status(400).render('admin/error.art', { msg: '邮箱或密码错误，请重试' });
