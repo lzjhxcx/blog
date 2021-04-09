@@ -24,5 +24,9 @@ admin.get('/article', require('./admin/article'));
 admin.get('/article-edit', require('./admin/article-edit'));
 //实现文章添加功能路由
 admin.post('/article-add', require('./admin/article-add'));
+// 用户修改功能路由
+admin.post('/article-modify', require('./admin/article-modify'));
+//用户删除功能路由
+admin.post('/article-delete', require('./admin/article-delete'));
 //导出
 module.exports = admin;

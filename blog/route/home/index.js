@@ -10,6 +10,7 @@ module.exports = async(req, res) => {
     let str = JSON.stringify(articles);
     let json = JSON.parse(str);
     res.render('home/default.art', {
-        articles: json
+        articles: json,
+        isLogin: req.session.username
     })
 }

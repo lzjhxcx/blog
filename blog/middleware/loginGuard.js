@@ -6,7 +6,7 @@ var guard = (req, res, next) => {
     if (req.url != '/login' && !req.session.username) {
         res.redirect('/admin/login');
     } else {
-        if (req.session.role == 'normal') {
+        if (req.session.role == 'normal' && req.url != '/logout' && req.url != '/login') {
             return res.redirect('/home/index');
         }
         //如果用户是登录的 继续下一步操作

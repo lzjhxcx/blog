@@ -17,7 +17,8 @@ module.exports = async(req, res) => {
     // return
     res.render('home/article.art', {
         article: jsonArticle,
-        comments: jsonComment
+        comments: jsonComment,
+        isLogin: req.session.username
     })
 
 }

@@ -46,7 +46,7 @@ const User = mongoose.model('User', userSchema);
 //     console.log(pass);
 //     //加密用户密码
 //     User.create({
-//         username: '牛肉干',
+//         username: 'admin',
 //         email: '123@163.com',
 //         password: pass,
 //         role: 'admin',

@@ -19,10 +19,10 @@
 					{{@article.content}}
 				</div>
 				<div class="article-comment">
-					{{if userInfo}}
+					{{if isLogin}}
 					<h4>评论</h4>
 					<form class="comment-form" action="/home/comment" method="post">
-						<textarea class="comment" name="content"></textarea>
+						<textarea class="comment" name="content" id="editor"></textarea>
 						<input type="hidden" name="aid" value={{@article._id}}>
 						<input type="hidden" name="uid" value={{@userInfo._id}}>
 						<div class="items">
@@ -41,7 +41,7 @@
 								<span>{{$value.uid.email}}</span>
 							</div>
 							<div class="comment-content">
-								{{$value.content}}
+								{{@$value.content}}
 							</div>
 						</div>
 					</div>
@@ -51,4 +51,20 @@
 		</div>
 	</div>
 	<!-- 文章框架结束 -->
+{{/block}}
+{{block 'script'}}
+<script src="/admin/lib/ckeditor5/ckeditor.js"></script>
+    <script type="text/javascript">
+    
+        let editor;
+
+        ClassicEditor
+                .create( document.querySelector('#editor'))
+                .then(newEditor => {
+                    editor = newEditor;
+                })
+                .catch( error => {
+                    console.error( error );
+                });
+</script>
 {{/block}}

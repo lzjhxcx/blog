@@ -8,5 +8,6 @@
 </head>
 <body>
     {{block 'main'}} {{/block}}
+	{{block 'script'}}{{/block}}
 </body>
 </html>

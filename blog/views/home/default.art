@@ -10,7 +10,7 @@
 	<!--{{$index %2 == 0?'fl':'fr'}}-->
 		<li class={{$index %2 == 0?'fl':'fr'}}>
 			<a href="/home/article?id={{@$value._id}}" class="thumbnail">
-				<img src={{$value.cover}}>
+				<img src={{$value.cover}} align="center">
 			</a>
 			<div class="content">
 				<a class="article-title" href="/home/article?id={{@$value._id}}">{{$value.title}}</a>

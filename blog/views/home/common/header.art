@@ -3,7 +3,7 @@
 		<div class="w1100">
 			<!-- 网站logo开始 -->
 			<h1 class="logo fl">
-				<a href="default.html"><img src="images/logo.png" alt="黑马程序员"></a>
+				<a href="/home/index"><img src="/home/images/logo.png" alt="万林博客"></a>
 			</h1>
 			<!-- 网站logo结束 -->
 			<!-- 网站导航开始 -->
@@ -11,9 +11,16 @@
 				<li>
 					<a href="/home/index">首页</a>
 				</li>
+			{{if isLogin}}
+				<li>
+					<a>{{userInfo.username}}</a>
+					<li><a href="/admin/logout">退出登录</a></li>
+				</li>
+				{{else}}
 				<li>
 					<a href="/admin/login">登录</a>
 				</li>
+			{{/if}}
 			</ul>
 			<!-- 网站导航结束 -->
 		</div>

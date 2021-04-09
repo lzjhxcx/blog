@@ -2,7 +2,7 @@
 const { User, validateUser } = require('../../model/user');
 //引入bcrypt模块
 const bcrypt = require('bcrypt');
-const e = require('express');
+const express = require('express');
 module.exports = async(req, res, next) => {
     //获取客户端传来的参数
     let { username, email, password, role, state } = req.body;

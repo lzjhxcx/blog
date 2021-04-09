@@ -46,7 +46,7 @@ app.use(session({
 if (process.env.NODE_ENV == 'developement') {
     console.log('当前是开发环境');
     //在开发环境中，将客户端发送到服务端的请求信息打印到控制台中
-    // app.use(morgan('dev'))
+    app.use(morgan('dev'))
 } else {
     console.log('当前是生产环境');
 }
